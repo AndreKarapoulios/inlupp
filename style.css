@@ -1,0 +1,88 @@
+body{
+    margin: 0;
+}
+
+header{
+    background-image: linear-gradient(rgba(255,255,255,0),rgba(255,255,255,1)),url("Background.jpg");
+    background-size: cover;
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Pacifico', sans-serif;
+    text-decoration: underline;
+}
+
+h1 {
+    margin: 0;
+    padding: 100px 0;
+}
+
+#wrapper{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.input{
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    padding: 10px;
+    text-align: center;
+}
+#button{
+    border: 1px solid black;
+    box-shadow: 15px 15px 5px #444;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-top: 30px;
+}
+
+#button:hover{
+    background-color: lightgreen;
+}
+
+#in{
+    padding: 10px;
+    border: 1px solid black;
+    box-shadow: 15px 15px 5px #444;
+    width: 100%;
+    border-radius: 15px;
+    font-size: 20px;
+}
+
+ul{
+    padding: 0;
+}
+
+ul li{
+    margin: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+li button{
+    margin-left: 10px;
+}
+
+.thedonelist, .thelist{
+    border: 1px solid black;
+    text-decoration: underline;
+    background-color: white;
+    box-shadow: 15px 15px 5px #444;
+    margin: 20px 20px;
+}
+@media (min-width: 768px) {
+    #wrapper{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .thelist, .thedonelist{
+        width: 40%;
+    }
+    #in{
+        width: 400px;
+    }
+}

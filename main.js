@@ -20,7 +20,9 @@ function addtolist() {
     buttdel.addEventListener('click', function () {
         getlist.removeChild(li);
     });
-
+    
+    var buttonDiv = document.createElement('span');
+    
     var buttedit = document.createElement('button');
     buttedit.innerText = 'Edit';
 
@@ -40,7 +42,9 @@ function addtolist() {
             buttondeledit.addEventListener('click', function () {
                 getlist.removeChild(liafteredit);
             });
-
+    
+            var buttonEditDiv = document.createElement('span');
+            
             var buttondoneedit = document.createElement('button');
             buttondoneedit.innerText = 'Done';
             buttondoneedit.addEventListener('click', function () {
@@ -60,9 +64,9 @@ function addtolist() {
                 getlistedited.appendChild(liedited);
             });
             liafteredit.appendChild(spanedit);
-            liafteredit.appendChild(buttondeledit);
-            liafteredit.appendChild(buttondoneedit);
-
+            buttonEditDiv.appendChild(buttondeledit);
+            buttonEditDiv.appendChild(buttondoneedit);
+            liafteredit.appendChild(buttonEditDiv);
             getlist.replaceChild(liafteredit, liedit);
         });
         liedit.appendChild(edittext);
@@ -93,9 +97,10 @@ function addtolist() {
     });
 
     li.appendChild(span);
-    li.appendChild(buttdel);
-    li.appendChild(buttdone);
-    li.appendChild(buttedit);
+    buttonDiv.appendChild(buttdel);
+    buttonDiv.appendChild(buttdone);
+    buttonDiv.appendChild(buttedit);
+    li.appendChild(buttonDiv);
     getlist.appendChild(li);
     input.value = '';
 }
